@@ -1,0 +1,44 @@
+{
+    "name": "sumityadav/icici-lib",
+    "description": "ICICI bank payment gateway library.",
+    "keywords": [
+        "league",
+        "icici-lib"
+    ],
+    "homepage": "https://github.com/sumityadav/icici-lib",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "sumityadav",
+            "email": "sumi.yadav@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php" : ">=5.5.9",
+        "phpseclib/phpseclib": "^2.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit" : "4.*",
+        "scrutinizer/ocular": "~1.1",
+        "fzaninotto/faker": "^1.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "Sumityadav\\Icici\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Sumityadav\\Icici\\Test\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "phpunit"
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0-dev"
+        }
+    }
+}
