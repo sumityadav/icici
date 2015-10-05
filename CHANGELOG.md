@@ -1,6 +1,6 @@
 # Changelog
 
-All Notable changes to `sumityadav/icici-lib` will be documented in this file
+All Notable changes to `sumityadav/icici` will be documented in this file
 
 ### Added
 - Adding basic classes

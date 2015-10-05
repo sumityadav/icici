@@ -3,8 +3,6 @@
 [![Latest Version on Packagist][ico-version]][link-packagist]
 [![Software License][ico-license]](LICENSE.md)
 [![Build Status][ico-travis]][link-travis]
-[![Coverage Status][ico-scrutinizer]][link-scrutinizer]
-[![Quality Score][ico-code-quality]][link-code-quality]
 [![Total Downloads][ico-downloads]][link-downloads]
 
 **ICICI core classess for implementing payseal payment gateway.**
@@ -14,7 +12,7 @@
 Via Composer
 
 ``` bash
-$ composer require sumityadav/icici-lib
+$ composer require sumityadav/icici
 ```
 
 <!--
@@ -53,17 +51,13 @@ If you discover any security related issues, please email sumi.yadav@gmail.com i
 
 The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
 
-[ico-version]: https://img.shields.io/packagist/v/sumityadav/icici-lib.svg?style=flat-square
+[ico-version]: https://img.shields.io/packagist/v/sumityadav/icici.svg?style=flat-square
 [ico-license]: https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square
-[ico-travis]: https://img.shields.io/travis/sumityadav/icici-lib/master.svg?style=flat-square
-[ico-scrutinizer]: https://img.shields.io/scrutinizer/coverage/g/sumityadav/icici-lib.svg?style=flat-square
-[ico-code-quality]: https://img.shields.io/scrutinizer/g/sumityadav/icici-lib.svg?style=flat-square
-[ico-downloads]: https://img.shields.io/packagist/dt/sumityadav/icici-lib.svg?style=flat-square
+[ico-travis]: https://img.shields.io/travis/sumityadav/icici/master.svg?style=flat-square
+[ico-downloads]: https://img.shields.io/packagist/dt/sumityadav/icici.svg?style=flat-square
 
-[link-packagist]: https://packagist.org/packages/sumityadav/icici-lib
-[link-travis]: https://travis-ci.org/sumityadav/icici-lib
-[link-scrutinizer]: https://scrutinizer-ci.com/g/sumityadav/icici-lib/code-structure
-[link-code-quality]: https://scrutinizer-ci.com/g/sumityadav/icici-lib
-[link-downloads]: https://packagist.org/packages/sumityadav/icici-lib
+[link-packagist]: https://packagist.org/packages/sumityadav/icici
+[link-travis]: https://travis-ci.org/sumityadav/icici
+[link-downloads]: https://packagist.org/packages/sumityadav/icici
 [link-author]: https://github.com/sumityadav
 [link-contributors]: ../../contributors
