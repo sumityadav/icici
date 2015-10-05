@@ -2,111 +2,35 @@
 
 namespace Sumityadav\Icici;
 
+use Sumityadav\Icici\Customer;
+
 class Address
 {
-    protected $CustomerId;
-    protected $CustomerName;
-    protected $Email;
     protected $AddressLine1;
     protected $AddressLine2;
     protected $AddressLine3;
     protected $City;
     protected $State;
     protected $Zip;
-    protected $CountryAlphaCode;
+    protected $CountryCode;
+    protected $Customer;
 
-    public function __construct($CustomerName, $AddressLine1, $City, $State, $CountryAlphaCode = 'IN')
+    public function __construct(Customer $Customer)
     {
-        $this->CustomerName = $CustomerName;
-        $this->AddressLine1 = $AddressLine1;
-        $this->City = $City;
-        $this->State = $State;
-        $this->CountryAlphaCode = $CountryAlphaCode;
+        $this->Customer = $Customer;
     }
 
     public function toString()
     {
         return "The Bill to address is \n" .
-        "CustomerId: " . $this->getCustomerId() . "\n" .
-        "CustomerName: " . $this->getCustomerName() . "\n" .
+        "CustomerId: " . $this->Customer->getCustomerId() . "\n" .
+        "CustomerName: " . $this->Customer->getCustomerName() . "\n" .
         "Address: " . $this->getAddressLine1() . "\n" . $this->getAddressLine2() . "\n" . $this->getAddressLine3() . "\n" .
         "City: " . $this->getCity() . "\n" .
         "State: " . $this->getState() . "\n" .
         "Zip: " . $this->getZip() . "\n" .
-        "CountryAlphaCode: " . $this->getCountryAlphaCode() . "\n" .
+        "CountryCode: " . $this->getCountryCode() . "\n" .
         "Email: " . $this->getEmail();
-    }
-
-    /**
-     * Gets the value of CustomerId.
-     *
-     * @return mixed
-     */
-    public function getCustomerId()
-    {
-        return $this->CustomerId;
-    }
-
-    /**
-     * Sets the value of CustomerId.
-     *
-     * @param mixed $CustomerId the customer id
-     *
-     * @return self
-     */
-    protected function setCustomerId($CustomerId)
-    {
-        $this->CustomerId = $CustomerId;
-
-        return $this;
-    }
-
-    /**
-     * Gets the value of CustomerName.
-     *
-     * @return mixed
-     */
-    public function getCustomerName()
-    {
-        return $this->CustomerName;
-    }
-
-    /**
-     * Sets the value of CustomerName.
-     *
-     * @param mixed $CustomerName the customer name
-     *
-     * @return self
-     */
-    protected function setCustomerName($CustomerName)
-    {
-        $this->CustomerName = $CustomerName;
-
-        return $this;
-    }
-
-    /**
-     * Gets the value of Email.
-     *
-     * @return mixed
-     */
-    public function getEmail()
-    {
-        return $this->Email;
-    }
-
-    /**
-     * Sets the value of Email.
-     *
-     * @param mixed $Email the email
-     *
-     * @return self
-     */
-    protected function setEmail($Email)
-    {
-        $this->Email = $Email;
-
-        return $this;
     }
 
     /**
@@ -126,7 +50,7 @@ class Address
      *
      * @return self
      */
-    protected function setAddressLine1($AddressLine1)
+    public function setAddressLine1($AddressLine1)
     {
         $this->AddressLine1 = $AddressLine1;
 
@@ -150,7 +74,7 @@ class Address
      *
      * @return self
      */
-    protected function setAddressLine2($AddressLine2)
+    public function setAddressLine2($AddressLine2)
     {
         $this->AddressLine2 = $AddressLine2;
 
@@ -174,7 +98,7 @@ class Address
      *
      * @return self
      */
-    protected function setAddressLine3($AddressLine3)
+    public function setAddressLine3($AddressLine3)
     {
         $this->AddressLine3 = $AddressLine3;
 
@@ -198,7 +122,7 @@ class Address
      *
      * @return self
      */
-    protected function setCity($City)
+    public function setCity($City)
     {
         $this->City = $City;
 
@@ -222,7 +146,7 @@ class Address
      *
      * @return self
      */
-    protected function setState($State)
+    public function setState($State)
     {
         $this->State = $State;
 
@@ -246,7 +170,7 @@ class Address
      *
      * @return self
      */
-    protected function setZip($Zip)
+    public function setZip($Zip)
     {
         $this->Zip = $Zip;
 
@@ -254,25 +178,25 @@ class Address
     }
 
     /**
-     * Gets the value of CountryAlphaCode.
+     * Gets the value of CountryCode.
      *
      * @return mixed
      */
-    public function getCountryAlphaCode()
+    public function getCountryCode()
     {
-        return $this->CountryAlphaCode;
+        return $this->CountryCode;
     }
 
     /**
-     * Sets the value of CountryAlphaCode.
+     * Sets the value of CountryCode.
      *
-     * @param mixed $CountryAlphaCode the country alpha code
+     * @param mixed $CountryCode the country alpha code
      *
      * @return self
      */
-    protected function setCountryAlphaCode($CountryAlphaCode)
+    public function setCountryCode($CountryCode)
     {
-        $this->CountryAlphaCode = $CountryAlphaCode;
+        $this->CountryCode = $CountryCode;
 
         return $this;
     }
