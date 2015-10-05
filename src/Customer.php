@@ -9,7 +9,8 @@ class Customer
     protected $Email;
 
     public function __construct()
-    {}
+    {
+    }
 
     /**
      * Gets the value of Id.
@@ -82,5 +83,4 @@ class Customer
 
         return $this;
     }
-
 }

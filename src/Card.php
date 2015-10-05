@@ -27,7 +27,8 @@ class Card
     protected $card_type; // CREDI, DEBIT
 
     public function __construct()
-    {}
+    {
+    }
 
     /**
      * Gets the value of number.

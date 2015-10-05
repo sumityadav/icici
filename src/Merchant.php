@@ -136,7 +136,8 @@ class Merchant
     protected $EndDate;
 
     public function __construct()
-    {}
+    {
+    }
 
     /**
      * Gets the value of MerchantId.

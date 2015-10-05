@@ -25,7 +25,9 @@ class Address
         return "The Bill to address is \n" .
         "CustomerId: " . $this->Customer->getCustomerId() . "\n" .
         "CustomerName: " . $this->Customer->getCustomerName() . "\n" .
-        "Address: " . $this->getAddressLine1() . "\n" . $this->getAddressLine2() . "\n" . $this->getAddressLine3() . "\n" .
+        "Address: " . $this->getAddressLine1() . "\n"
+        . $this->getAddressLine2() . "\n"
+        . $this->getAddressLine3() . "\n" .
         "City: " . $this->getCity() . "\n" .
         "State: " . $this->getState() . "\n" .
         "Zip: " . $this->getZip() . "\n" .

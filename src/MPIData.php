@@ -57,7 +57,8 @@ class MPIData
     protected $CurrencyValue;
 
     public function __construct()
-    {}
+    {
+    }
 
     /**
      * Gets the Numeric value associated with the VBV process provided by the MPI.
