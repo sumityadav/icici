@@ -1,9 +1,9 @@
 # ICICI Payseal
 
-[![Latest Version on Packagist][ico-version]][link-packagist]
-[![Software License][ico-license]](LICENSE.md)
-[![Build Status][ico-travis]][link-travis]
-[![Total Downloads][ico-downloads]][link-downloads]
+[![Build Status](https://travis-ci.org/sumityadav/icici.png?branch=master)](https://travis-ci.org/sumityadav/icici)
+[![Latest Stable Version](https://poser.pugx.org/sumityadav/icici/version.png)](https://packagist.org/packages/sumityadav/icici)
+[![Total Downloads](https://poser.pugx.org/sumityadav/icici/d/total.png)](https://packagist.org/packages/sumityadav/icici)
+
 
 **ICICI core classess for implementing payseal payment gateway.**
 
