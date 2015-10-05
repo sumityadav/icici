@@ -34,7 +34,7 @@ class IciciTest extends PHPUnit_Framework_TestCase
             ->setAmount('100')
         ;
         for ($i = 1; $i <= 5; $i++) {
-            $objMerchant->{setExt . $i}('Ext' . $i);
+            $objMerchant->{'setExt' . $i}('Ext' . $i);
         }
 
         $objCustomer = new Customer();
