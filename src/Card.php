@@ -4,6 +4,8 @@ namespace Sumityadav\Icici;
 
 class Card
 {
+    use Arrayable;
+
     protected $number;
     protected $type; // VISA, MC
     protected $expiration_month;

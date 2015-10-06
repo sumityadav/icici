@@ -30,7 +30,7 @@ class IciciTest extends PHPUnit_Framework_TestCase
             ->setMerchantTransactionId($random)
             ->setOrderReferenceNumber('ORDER_' . $random)
             ->setInvoiceNumber('INV_' . $random)
-            ->setCurrentCode('INR')
+            ->setCurrencyCode('INR')
             ->setAmount('100')
         ;
         for ($i = 1; $i <= 5; $i++) {

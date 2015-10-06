@@ -65,7 +65,7 @@ class GatewayResponse
      *
      * @return self
      */
-    protected function setRespCode($RespCode)
+    public function setRespCode($RespCode)
     {
         $this->RespCode = $RespCode;
 
@@ -89,7 +89,7 @@ class GatewayResponse
      *
      * @return self
      */
-    protected function setRespMessage($RespMessage)
+    public function setRespMessage($RespMessage)
     {
         $this->RespMessage = $RespMessage;
 
@@ -113,7 +113,7 @@ class GatewayResponse
      *
      * @return self
      */
-    protected function setTxnId($TxnId)
+    public function setTxnId($TxnId)
     {
         $this->TxnId = $TxnId;
 
@@ -137,7 +137,7 @@ class GatewayResponse
      *
      * @return self
      */
-    protected function setEPGTxnId($EPGTxnId)
+    public function setEPGTxnId($EPGTxnId)
     {
         $this->EPGTxnId = $EPGTxnId;
 
@@ -161,7 +161,7 @@ class GatewayResponse
      *
      * @return self
      */
-    protected function setRedirectionTxnId($RedirectionTxnId)
+    public function setRedirectionTxnId($RedirectionTxnId)
     {
         $this->RedirectionTxnId = $RedirectionTxnId;
 
@@ -185,7 +185,7 @@ class GatewayResponse
      *
      * @return self
      */
-    protected function setRedirectionUrl($RedirectionUrl)
+    public function setRedirectionUrl($RedirectionUrl)
     {
         $this->RedirectionUrl = $RedirectionUrl;
 
@@ -209,7 +209,7 @@ class GatewayResponse
      *
      * @return self
      */
-    protected function setAuthIdCode($AuthIdCode)
+    public function setAuthIdCode($AuthIdCode)
     {
         $this->AuthIdCode = $AuthIdCode;
 
@@ -233,7 +233,7 @@ class GatewayResponse
      *
      * @return self
      */
-    protected function setRRN($RRN)
+    public function setRRN($RRN)
     {
         $this->RRN = $RRN;
 
@@ -257,7 +257,7 @@ class GatewayResponse
      *
      * @return self
      */
-    protected function setTxnType($TxnType)
+    public function setTxnType($TxnType)
     {
         $this->TxnType = $TxnType;
 
@@ -281,7 +281,7 @@ class GatewayResponse
      *
      * @return self
      */
-    protected function setTxnDateTime($TxnDateTime)
+    public function setTxnDateTime($TxnDateTime)
     {
         $this->TxnDateTime = $TxnDateTime;
 
@@ -305,7 +305,7 @@ class GatewayResponse
      *
      * @return self
      */
-    protected function setCVRespCode($CVRespCode)
+    public function setCVRespCode($CVRespCode)
     {
         $this->CVRespCode = $CVRespCode;
 
@@ -329,7 +329,7 @@ class GatewayResponse
      *
      * @return self
      */
-    protected function setReserveFld1($ReserveFld1)
+    public function setReserveFld1($ReserveFld1)
     {
         $this->ReserveFld1 = $ReserveFld1;
 
@@ -353,7 +353,7 @@ class GatewayResponse
      *
      * @return self
      */
-    protected function setReserveFld2($ReserveFld2)
+    public function setReserveFld2($ReserveFld2)
     {
         $this->ReserveFld2 = $ReserveFld2;
 
@@ -377,7 +377,7 @@ class GatewayResponse
      *
      * @return self
      */
-    protected function setReserveFld3($ReserveFld3)
+    public function setReserveFld3($ReserveFld3)
     {
         $this->ReserveFld3 = $ReserveFld3;
 
@@ -401,7 +401,7 @@ class GatewayResponse
      *
      * @return self
      */
-    protected function setReserveFld4($ReserveFld4)
+    public function setReserveFld4($ReserveFld4)
     {
         $this->ReserveFld4 = $ReserveFld4;
 
@@ -425,7 +425,7 @@ class GatewayResponse
      *
      * @return self
      */
-    protected function setReserveFld5($ReserveFld5)
+    public function setReserveFld5($ReserveFld5)
     {
         $this->ReserveFld5 = $ReserveFld5;
 
@@ -449,7 +449,7 @@ class GatewayResponse
      *
      * @return self
      */
-    protected function setReserveFld6($ReserveFld6)
+    public function setReserveFld6($ReserveFld6)
     {
         $this->ReserveFld6 = $ReserveFld6;
 
@@ -473,7 +473,7 @@ class GatewayResponse
      *
      * @return self
      */
-    protected function setReserveFld7($ReserveFld7)
+    public function setReserveFld7($ReserveFld7)
     {
         $this->ReserveFld7 = $ReserveFld7;
 
@@ -497,7 +497,7 @@ class GatewayResponse
      *
      * @return self
      */
-    protected function setReserveFld8($ReserveFld8)
+    public function setReserveFld8($ReserveFld8)
     {
         $this->ReserveFld8 = $ReserveFld8;
 
@@ -521,7 +521,7 @@ class GatewayResponse
      *
      * @return self
      */
-    protected function setReserveFld9($ReserveFld9)
+    public function setReserveFld9($ReserveFld9)
     {
         $this->ReserveFld9 = $ReserveFld9;
 
@@ -545,7 +545,7 @@ class GatewayResponse
      *
      * @return self
      */
-    protected function setReserveFld10($ReserveFld10)
+    public function setReserveFld10($ReserveFld10)
     {
         $this->ReserveFld10 = $ReserveFld10;
 
@@ -569,7 +569,7 @@ class GatewayResponse
      *
      * @return self
      */
-    protected function setPGRESPRESPCODE($PG_RESP_RESPCODE)
+    public function setPGRESPRESPCODE($PG_RESP_RESPCODE)
     {
         $this->PG_RESP_RESPCODE = $PG_RESP_RESPCODE;
 
@@ -593,7 +593,7 @@ class GatewayResponse
      *
      * @return self
      */
-    protected function setPGRESPRESPMSG($PG_RESP_RESPMSG)
+    public function setPGRESPRESPMSG($PG_RESP_RESPMSG)
     {
         $this->PG_RESP_RESPMSG = $PG_RESP_RESPMSG;
 
@@ -617,7 +617,7 @@ class GatewayResponse
      *
      * @return self
      */
-    protected function setPGRESPEPGTXNID($PG_RESP_EPG_TXN_ID)
+    public function setPGRESPEPGTXNID($PG_RESP_EPG_TXN_ID)
     {
         $this->PG_RESP_EPG_TXN_ID = $PG_RESP_EPG_TXN_ID;
 
@@ -641,7 +641,7 @@ class GatewayResponse
      *
      * @return self
      */
-    protected function setPGRESPMRTTXNID($PG_RESP_MRT_TXN_ID)
+    public function setPGRESPMRTTXNID($PG_RESP_MRT_TXN_ID)
     {
         $this->PG_RESP_MRT_TXN_ID = $PG_RESP_MRT_TXN_ID;
 
@@ -665,7 +665,7 @@ class GatewayResponse
      *
      * @return self
      */
-    protected function setPGRESPREDIRECTTXNID($PG_RESP_REDIRECT_TXN_ID)
+    public function setPGRESPREDIRECTTXNID($PG_RESP_REDIRECT_TXN_ID)
     {
         $this->PG_RESP_REDIRECT_TXN_ID = $PG_RESP_REDIRECT_TXN_ID;
 
@@ -689,7 +689,7 @@ class GatewayResponse
      *
      * @return self
      */
-    protected function setPGRESPAUTHID($PG_RESP_AUTH_ID)
+    public function setPGRESPAUTHID($PG_RESP_AUTH_ID)
     {
         $this->PG_RESP_AUTH_ID = $PG_RESP_AUTH_ID;
 
@@ -713,7 +713,7 @@ class GatewayResponse
      *
      * @return self
      */
-    protected function setPGRESPRRN($PG_RESP_RRN)
+    public function setPGRESPRRN($PG_RESP_RRN)
     {
         $this->PG_RESP_RRN = $PG_RESP_RRN;
 
@@ -737,7 +737,7 @@ class GatewayResponse
      *
      * @return self
      */
-    protected function setPGRESPTXNTYPE($PG_RESP_TXNTYPE)
+    public function setPGRESPTXNTYPE($PG_RESP_TXNTYPE)
     {
         $this->PG_RESP_TXNTYPE = $PG_RESP_TXNTYPE;
 
@@ -761,7 +761,7 @@ class GatewayResponse
      *
      * @return self
      */
-    protected function setPGRESPTXNDATETIME($PG_RESP_TXN_DATE_TIME)
+    public function setPGRESPTXNDATETIME($PG_RESP_TXN_DATE_TIME)
     {
         $this->PG_RESP_TXN_DATE_TIME = $PG_RESP_TXN_DATE_TIME;
 
@@ -785,7 +785,7 @@ class GatewayResponse
      *
      * @return self
      */
-    protected function setPGRESPCVRESPCODE($PG_RESP_CVRESP_CODE)
+    public function setPGRESPCVRESPCODE($PG_RESP_CVRESP_CODE)
     {
         $this->PG_RESP_CVRESP_CODE = $PG_RESP_CVRESP_CODE;
 
@@ -809,7 +809,7 @@ class GatewayResponse
      *
      * @return self
      */
-    protected function setPGRESPRESERVE1($PG_RESP_RESERVE1)
+    public function setPGRESPRESERVE1($PG_RESP_RESERVE1)
     {
         $this->PG_RESP_RESERVE1 = $PG_RESP_RESERVE1;
 
@@ -833,7 +833,7 @@ class GatewayResponse
      *
      * @return self
      */
-    protected function setPGRESPRESERVE2($PG_RESP_RESERVE2)
+    public function setPGRESPRESERVE2($PG_RESP_RESERVE2)
     {
         $this->PG_RESP_RESERVE2 = $PG_RESP_RESERVE2;
 
@@ -857,7 +857,7 @@ class GatewayResponse
      *
      * @return self
      */
-    protected function setPGRESPRESERVE3($PG_RESP_RESERVE3)
+    public function setPGRESPRESERVE3($PG_RESP_RESERVE3)
     {
         $this->PG_RESP_RESERVE3 = $PG_RESP_RESERVE3;
 
@@ -881,7 +881,7 @@ class GatewayResponse
      *
      * @return self
      */
-    protected function setPGRESPRESERVE4($PG_RESP_RESERVE4)
+    public function setPGRESPRESERVE4($PG_RESP_RESERVE4)
     {
         $this->PG_RESP_RESERVE4 = $PG_RESP_RESERVE4;
 
@@ -905,7 +905,7 @@ class GatewayResponse
      *
      * @return self
      */
-    protected function setPGRESPRESERVE5($PG_RESP_RESERVE5)
+    public function setPGRESPRESERVE5($PG_RESP_RESERVE5)
     {
         $this->PG_RESP_RESERVE5 = $PG_RESP_RESERVE5;
 
@@ -929,7 +929,7 @@ class GatewayResponse
      *
      * @return self
      */
-    protected function setPGRESPRESERVE6($PG_RESP_RESERVE6)
+    public function setPGRESPRESERVE6($PG_RESP_RESERVE6)
     {
         $this->PG_RESP_RESERVE6 = $PG_RESP_RESERVE6;
 
@@ -953,7 +953,7 @@ class GatewayResponse
      *
      * @return self
      */
-    protected function setPGRESPRESERVE7($PG_RESP_RESERVE7)
+    public function setPGRESPRESERVE7($PG_RESP_RESERVE7)
     {
         $this->PG_RESP_RESERVE7 = $PG_RESP_RESERVE7;
 
@@ -977,7 +977,7 @@ class GatewayResponse
      *
      * @return self
      */
-    protected function setPGRESPRESERVE8($PG_RESP_RESERVE8)
+    public function setPGRESPRESERVE8($PG_RESP_RESERVE8)
     {
         $this->PG_RESP_RESERVE8 = $PG_RESP_RESERVE8;
 
@@ -1001,7 +1001,7 @@ class GatewayResponse
      *
      * @return self
      */
-    protected function setPGRESPRESERVE9($PG_RESP_RESERVE9)
+    public function setPGRESPRESERVE9($PG_RESP_RESERVE9)
     {
         $this->PG_RESP_RESERVE9 = $PG_RESP_RESERVE9;
 
@@ -1025,10 +1025,27 @@ class GatewayResponse
      *
      * @return self
      */
-    protected function setPGRESPRESERVE10($PG_RESP_RESERVE10)
+    public function setPGRESPRESERVE10($PG_RESP_RESERVE10)
     {
         $this->PG_RESP_RESERVE10 = $PG_RESP_RESERVE10;
 
         return $this;
     }
+
+    /**
+     * Set the error response
+     *
+     * @param string  $message Error message
+     * @param integer $code    Error code
+     *
+     * @return self
+     */
+    public function setErrorResponse($message, $code = 2)
+    {
+        $this->setRespMessage($message);
+        $this->setRespCode($code);
+
+        return $this;
+    }
+
 }
