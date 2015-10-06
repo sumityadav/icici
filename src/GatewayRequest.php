@@ -35,28 +35,28 @@ class GatewayRequest
         $objResponse = new GatewayResponse();
 
         if ($this->Merchant === null) {
-            return $objResponse->setErrorResponse("Merchant object is null or invalid. Transaction cannot proceed.");
+            return $objResponse->setErrorResponse("Merchant object is null or invalid.");
         }
 
         if (!$this->Merchant->getMerchantId()) {
-            return $objResponse->setErrorResponse("Merchant id is null or invalid. Transaction cannot proceed.");
+            return $objResponse->setErrorResponse("Merchant id is null or invalid.");
         }
 
         if (!$this->Merchant->getMerchantTransactionId()) {
-            return $objResponse->setErrorResponse("Merchant transaction id is null or invalid. Transaction cannot proceed.");
+            return $objResponse->setErrorResponse("Merchant transaction id is null or invalid.");
         }
 
         if (!$this->Merchant->getMessageType()) {
-            return $objResponse->setErrorResponse("Message type is null or invalid. Transaction cannot proceed.");
+            return $objResponse->setErrorResponse("Message type is null or invalid.");
         }
 
         if ($this->Card === null) {
-            return $objResponse->setErrorResponse("Card object is null or invalid. Transaction cannot proceed.");
+            return $objResponse->setErrorResponse("Card object is null or invalid.");
         }
 
         $encryptedData = $this->encryptData();
         if (!$encryptedData) {
-            return $objResponse->setErrorResponse("Error while encrypting/ hashing data. Transaction cannot proceed.");
+            return $objResponse->setErrorResponse("Error while encrypting/ hashing data.");
         }
 
         $requestString = $this->buildRequest($encryptedData);

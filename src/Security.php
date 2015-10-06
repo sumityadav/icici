@@ -28,13 +28,13 @@ class Security
     {
         // Read the security key
         $strkey = $this->getKey();
-        $packedKey = $this->_pack($strkey);
+        $packedKey = $this->pack($strkey);
 
         $hash = new Hash('sha1');
         $hash->setKey($packedKey);
 
         $digest = $hash->hash($stringToEncrypt);
-        return $this->_unpack($digest);
+        return $this->unpack($digest);
     }
 
     /**
@@ -50,10 +50,10 @@ class Security
 
         $des = new DES();
         $des->mode = $des::MODE_ECB;
-        $des->setKey($this->_pack($this->MerchantID . $this->MerchantID));
-        $cleartext = $des->decrypt($this->_pack($strmodulas));
+        $des->setKey($this->pack($this->MerchantID . $this->MerchantID));
+        $cleartext = $des->decrypt($this->pack($strmodulas));
 
-        $hexkey = $this->_unpack($cleartext);
+        $hexkey = $this->unpack($cleartext);
         return strlen($hexkey) <= 40 ? $hexkey : substr($hexkey, 0, 40);
     }
 
@@ -107,7 +107,7 @@ class Security
      * @param  string $string Input string to pack
      * @return string         Returns a binary string containing data
      */
-    private function _pack($string)
+    private function pack($string)
     {
         $string = str_replace(' ', '', $string);
         return pack('H*', $string);
@@ -118,9 +118,8 @@ class Security
      * @param  string $string Binary string
      * @return string         Plain text
      */
-    private function _unpack($string)
+    private function unpack($string)
     {
         return array_shift(unpack('H*', $string));
     }
-
 }

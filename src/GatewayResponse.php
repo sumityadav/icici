@@ -1047,5 +1047,4 @@ class GatewayResponse
 
         return $this;
     }
-
 }
