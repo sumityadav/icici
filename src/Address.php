@@ -6,6 +6,8 @@ use Sumityadav\Icici\Customer;
 
 class Address
 {
+    use Arrayable;
+
     protected $AddressLine1;
     protected $AddressLine2;
     protected $AddressLine3;
@@ -199,6 +201,30 @@ class Address
     public function setCountryCode($CountryCode)
     {
         $this->CountryCode = $CountryCode;
+
+        return $this;
+    }
+
+    /**
+     * Gets the value of Customer.
+     *
+     * @return mixed
+     */
+    public function getCustomer()
+    {
+        return $this->Customer;
+    }
+
+    /**
+     * Sets the value of Customer.
+     *
+     * @param mixed $Customer the customer
+     *
+     * @return self
+     */
+    public function setCustomer($Customer)
+    {
+        $this->Customer = $Customer;
 
         return $this;
     }

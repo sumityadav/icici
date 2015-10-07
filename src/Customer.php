@@ -4,6 +4,8 @@ namespace Sumityadav\Icici;
 
 class Customer
 {
+    use Arrayable;
+
     protected $Id;
     protected $Name;
     protected $Email;

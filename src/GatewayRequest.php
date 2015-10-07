@@ -197,6 +197,25 @@ class GatewayRequest
     {
         $request = array();
 
+        $request[] = $this->parseObjectParameters($this->Merchant);
+        $request[] = $this->parseObjectParameters($this->BillingAddress);
+        $request[] = $this->parseObjectParameters($this->ShippingAddress);
+        $request[] = $this->parseObjectParameters($this->Card);
+        $request[] = $this->parseObjectParameters($this->MPIData);
+        $request[] = $this->parseObjectParameters($this->ReserveFields);
         return implode("&", $request);
+    }
+
+    private function parseObjectParameters($object)
+    {
+        $return = [];
+        if (method_exists($object, 'toArray')) {
+            foreach ($object->toArray() as $key => $value) {
+                if (!is_object($value)) {
+                    $return[] = $key . '=' . $value;
+                }
+            }
+        }
+        return implode("&", $return);
     }
 }

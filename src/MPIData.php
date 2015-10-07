@@ -7,6 +7,8 @@ namespace Sumityadav\Icici;
  */
 class MPIData
 {
+    use Arrayable;
+
     /**
      * Numeric value associated with the VBV process provided by the MPI
      */

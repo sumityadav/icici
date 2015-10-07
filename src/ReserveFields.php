@@ -4,6 +4,8 @@ namespace Sumityadav\Icici;
 
 class ReserveFields
 {
+    use Arrayable;
+
     protected $ReserveField1;
     protected $ReserveField2;
     protected $ReserveField3;
