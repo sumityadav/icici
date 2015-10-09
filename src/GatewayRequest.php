@@ -2,6 +2,8 @@
 
 namespace Sumityadav\Icici;
 
+use GuzzleHttp\Client;
+use GuzzleHttp\Exception\RequestException;
 use League\Fractal\Manager;
 use League\Fractal\Resource\Item;
 use Sumityadav\Icici\Card;
@@ -57,7 +59,6 @@ class GatewayRequest
             return $objResponse->setErrorResponse("Card object is null or invalid.");
         }
 
-        dump($objResponse);die;
         $encryptedData = $this->encryptData();
         if (!$encryptedData) {
             return $objResponse->setErrorResponse("Error while encrypting/ hashing data.");
@@ -65,7 +66,22 @@ class GatewayRequest
         $this->setSecurityHash($encryptedData);
 
         $requestString = $this->buildRequest();
-        return $objResponse;
+
+        try {
+            $requestClient = new Client();
+            $response = $requestClient->post($this->motoUrl, [
+                'form_params' => $requestString,
+                'verify' => __DIR__ . '/files/cacert.pem',
+            ]);
+        } catch (RequestException $e) {
+            if ($e->hasResponse()) {
+                echo $e->getRequest();
+                echo $e->getResponse();
+            }
+        }
+
+        $processorResponse = $response->getBody()->getContents();
+        return $this->parseProcessorResponse($processorResponse);
     }
 
     protected function encryptData()
@@ -100,7 +116,7 @@ class GatewayRequest
      *
      * @return string
      */
-    public function buildRequest()
+    private function buildRequest()
     {
         $fractal = new Manager();
         // $fractal->setSerializer(new JsonApiSerializer());
@@ -108,7 +124,27 @@ class GatewayRequest
         $resource = new Item($this, new IciciTransformer);
         $request = $fractal->createData($resource)->toArray();
 
-        return http_build_query($request['data']);
+        return $request['data'];
+        // return http_build_query($request['data']);
+    }
+
+    /**
+     * Process and return the response back.
+     *
+     * @param  string $responseString & Separated string
+     * @return array
+     */
+    private function parseProcessorResponse($responseString)
+    {
+        parse_str($responseString, $responseArray);
+        return [
+            'ResponseCode' => $responseArray['RespCode'],
+            'ResponseMessage' => $responseArray['Message'],
+            'TransactionId' => $responseArray['TxnID'],
+            'ProcessorTransactionId' => $responseArray['ePGTxnID'],
+            'CurrencyCode' => $responseArray['CurrAlphaCode'],
+            // 'CitrusNBFlag' => $responseArray['isCitrusNBFlag'],
+        ];
     }
 
     /**

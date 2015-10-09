@@ -78,8 +78,8 @@ class Security
      */
     public function getFilePath()
     {
-        if (!$this->file_path && is_file(__DIR__ . '/' . $this->MerchantID . '.key')) {
-            $this->file_path = __DIR__ . '/' . $this->MerchantID . '.key';
+        if (!$this->file_path && is_file(__DIR__ . '/files/' . $this->MerchantID . '.key')) {
+            $this->file_path = __DIR__ . '/files/' . $this->MerchantID . '.key';
         }
 
         if (!$this->file_path) {
