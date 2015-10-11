@@ -6,9 +6,11 @@ use PHPUnit_Framework_TestCase;
 use Sumityadav\Icici\Address;
 use Sumityadav\Icici\Card;
 use Sumityadav\Icici\Customer;
+use Sumityadav\Icici\GatewayRequest;
 use Sumityadav\Icici\Merchant;
 use Sumityadav\Icici\MPIData;
 use Sumityadav\Icici\ReserveFields;
+use Sumityadav\Icici\Security;
 
 class IciciTest extends PHPUnit_Framework_TestCase
 {
