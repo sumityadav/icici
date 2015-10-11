@@ -87,6 +87,16 @@ class IciciTest extends PHPUnit_Framework_TestCase
         ;
 
         $objPGReserve = new ReserveFields();
+        $objSecurity = new Security($objMerchant->getMerchantId());
+
+        $gateway = new GatewayRequest($objSecurity);
+        $response = $gateway->setMerchant($objMerchant)
+            ->setBillingAddress($objBillingAddress)
+            ->setShippingAddress($objShippingAddress)
+            ->setCard($objCard)
+            ->setMPIData($objMPI)
+            ->setReserveFields($objPGReserve)
+            ->send();
 
     }
 }
